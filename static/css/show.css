@@ -1,0 +1,127 @@
+/* Container and font */
+.container {
+  font-family: 'Sevillana', cursive, serif;
+  color: #222;
+  padding: 2rem 1rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Heading */
+h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Product card wrapper */
+.custom-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Hover effect */
+.custom-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Product image */
+.custom-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Details section */
+.details {
+  padding: 1.2rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Each info section spacing */
+.section {
+  margin-bottom: 0.75rem;
+}
+
+/* Product name */
+.details h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  color: #111;
+}
+
+/* Price styling */
+.details p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Bold label inside p */
+.details p b {
+  color: #333;
+}
+
+/* Buttons container */
+.section a.btn {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Outline red buttons */
+.btn-outline-danger {
+  color: #d9534f;
+  border-color: #d9534f;
+  background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+  background-color: #d9534f;
+  color: white;
+  border-color: #d9534f;
+}
+
+/* Alerts */
+.alert {
+  max-width: 600px;
+  margin: 0 auto 1rem auto;
+  font-family: 'Sevillana', cursive;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .custom-card img {
+    height: 180px;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+}

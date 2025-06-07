@@ -1,0 +1,51 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- Brand Logo -->
+    <a class="navbar-brand" href="/">
+      <img src="https://luxecouturefashion.com/cdn/shop/files/Website_Carousel-21_21d1b381-b779-406c-a7af-592a060a4cb5_400x.png?v=1632943352"
+           alt="Logo" width="180" height="auto">
+    </a>
+
+    <!-- Toggle Button for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Right Side Items -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      {% if user.is_authenticated %}
+      <!-- Cart Button -->
+      <a class="btn btn-danger btn-lg position-relative me-3" href="/cart">
+        <i class="bi bi-cart2 fs-4"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+          {{ cartvalue }}
+        </span>
+      </a>
+      {% endif %}
+
+      <!-- Profile Dropdown -->
+      <div class="nav-item dropdown profile-icon">
+        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-account-269-866236.png"
+               alt="User" width="35" height="35" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end text-center">
+          {% if user.is_authenticated %}
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+          {% else %}
+          <li><a class="nav-link" href="/login/">Login</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="nav-link" href="/register">Register</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,62 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/show2.css' %}">
+
+<div style="font-family:Sevillana cursive" class="container">
+    <h3><b>SHOP DENIM</b></h3>
+    <div class="container">
+        <div class="container  text-center ">
+         
+            <br>
+            <p>Every woman needs a little denim in her closet, right!? Always functional and never outdated whether you’re going for a complete casual or smart-casual look. LUXE has a selection of sizes and styles for you including jeans, shorts, jackets, outerwear, and skirts.</p>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row gx-0 gy-3">
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.tags == "error" %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+            <!-- Product Cards -->
+            {% for product in products %}
+                {% if product.category == "denim" %}
+                    <div class="col-md-4 p-0">
+                        <div class="custom-card">
+                            <img src="http://127.0.0.1:8000/admin/product/media/{{ product.image }}" alt="{{ product.name }}">
+                            <div class="details">
+                                <div class="section">
+                                    <h5 style="font-family:Sevillana cursive" style="font-family:Sevillana cursive"><b>Name:</b>{{ product.name }}</h5>
+                                    <p style="font-family:Sevillana cursive"><b>Price:</b>&#8377;{{ product.price }}</p>
+                                </div>
+                                <div class="section">
+                                    <p style="font-family:Sevillana cursive"><b>Description:</b>{{ product.description }}</p>
+                                </div>
+                                <div class="section">
+                                    <p style="font-family:Sevillana cursive"><b>Category:</b>{{ product.category }}</p>
+                                </div>
+                                <div class="section">
+                                    <a href="/product/{{ product.id }}" class="w-100 btn btn-outline-danger">Add to Cart</a>
+                                </div>
+                                <div class="section">
+                                    <a href="{% url 'product_details' product.id %}" class="w-100 btn btn-outline-danger">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.footer {
+    background-color: #a8a8a8;
+    color: #343a40;
+    padding: 2rem 0;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.footer p, .footer a {
+    font-size: 0.9rem;
+    color: #343a40;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #343a40;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
+
+.footer .input-group .form-control {
+    border-radius: 0;
+    border: 1px solid #343a40;
+    color: #343a40;
+}
+
+.footer .input-group .btn {
+    border-radius: 0;
+    background-color: #ffffff;
+    color: #343a40;
+}
+
+.footer .input-group .btn:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.footer i {
+    font-size: 1.4rem;
+    color: #343a40;
+    transition: color 0.3s;
+}
+
+.footer i:hover {
+    color: #007bff;
+}

@@ -1,0 +1,57 @@
+/* nav.css */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.btn.btn-danger {
+  background-color: #e74c3c;
+  border: none;
+  font-weight: 500;
+}
+
+.btn.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.badge.bg-dark {
+  font-size: 0.7rem;
+}
+
+.navbar .dropdown-menu {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.dropdown-menu .nav-link {
+  font-family: 'Sevillana', cursive;
+  font-size: 1rem;
+  color: #333;
+}
+
+.dropdown-menu .nav-link:hover {
+  background-color: #f8f9fa;
+}
+
+.profile-icon img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.05);
+}
