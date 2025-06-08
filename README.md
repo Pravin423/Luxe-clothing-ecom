@@ -88,7 +88,8 @@ PAYMENT GATEWAY-
 ADMIN DASHBOARD-
 ![image](https://github.com/user-attachments/assets/bbc1be60-ebe9-4b9c-ad2d-1fac92df9610)
 ![image](https://github.com/user-attachments/assets/0b3d6328-5dd8-484c-bd4c-c155088a54b2)
-![image](https://github.com/user-attachments/assets/c504e63b-bbe3-4243-b8cd-0e7b354a5833)
+![image](https://github.com/user-attachments/assets/fbfa2906-5ec6-4af3-963c-4bec9b4f88ef)
+
 
 
 
