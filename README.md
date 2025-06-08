@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c504e63b-bbe3-4243-b8cd-0e7b354a5833)# 🛍️ Luxe Clothing – Django E-commerce Web Application
+# 🛍️ Luxe Clothing – Django E-commerce Web Application
 ## 🎯 Project Overview
 
 **Luxe Clothing** is a fully functional E-commerce Clothing Platform developed using Django. 
@@ -88,6 +88,7 @@ PAYMENT GATEWAY-
 ADMIN DASHBOARD-
 ![image](https://github.com/user-attachments/assets/bbc1be60-ebe9-4b9c-ad2d-1fac92df9610)
 ![image](https://github.com/user-attachments/assets/0b3d6328-5dd8-484c-bd4c-c155088a54b2)
+![image](https://github.com/user-attachments/assets/c504e63b-bbe3-4243-b8cd-0e7b354a5833)
 
 
 
