@@ -1,65 +1,65 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/footer.css' %}">
-
-<footer class="footer bg-light text-dark py-4 mt-5">
+<footer class="footer bg-dark text-light py-5 mt-5" style="border-top: 2px solid #222;">
     <div class="container">
-        <div class="row">
+        <div class="row g-5">
             <!-- Company Info -->
-            <div class="col-md-3">
-                <h5 style="font-family:Sevillana cursive">About Us</h5>
-                <img src="https://luxecouturefashion.com/cdn/shop/files/LuxeLogoFooter_360x.png?v=1618280821"  height="81px" width="278px">
-                <p style="font-family:Sevillana cursive">Discover the latest trends in fashion at unbeatable prices. We’re your one-stop shop for all things stylish.</p>
+            <div class="col-md-4">
+                <h3 class="mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 2px;">LUXE.</h3>
+                <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.8;">
+                    Discover the latest trends in fashion at unbeatable prices. We’re your one-stop shop for all things
+                    stylish and elegant.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-light fs-5"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+                </div>
             </div>
 
             <!-- Quick Links -->
-            <div class="col-md-3">
-                <h5 style="font-family:Sevillana cursive">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="/" class="text-dark">Home</a></li>
-                    <li><a href="/shop" class="text-dark">Shop</a></li>
-                    <li><a href="/about" class="text-dark">About Us</a></li>
-                    <li><a href="/contact" class="text-dark">Contact Us</a></li>
+            <div class="col-md-2 offset-md-1">
+                <h5 class="mb-4">Quick Links</h5>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="/" class="text-secondary text-decoration-none">Home</a></li>
+                    <li><a href="/shop" class="text-secondary text-decoration-none">Shop</a></li>
+                    <li><a href="/about" class="text-secondary text-decoration-none">About Us</a></li>
+                    <li><a href="/contact" class="text-secondary text-decoration-none">Contact</a></li>
                 </ul>
             </div>
 
             <!-- Customer Service -->
-            <div style="font-family:Sevillana cursive" class="col-md-3">
-                <h5>Customer Service</h5>
-                <ul class="list-unstyled">
-                    <li><a href="/help" class="text-dark">Help & FAQs</a></li>
-                    <li><a href="/shipping" class="text-dark">Shipping & Returns</a></li>
-                    <li><a href="/privacy" class="text-dark">Privacy Policy</a></li>
-                    <li><a href="/terms" class="text-dark">Terms & Conditions</a></li>
+            <div class="col-md-2">
+                <h5 class="mb-4">Service</h5>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="/help" class="text-secondary text-decoration-none">FAQs</a></li>
+                    <li><a href="/shipping" class="text-secondary text-decoration-none">Shipping</a></li>
+                    <li><a href="/privacy" class="text-secondary text-decoration-none">Privacy</a></li>
+                    <li><a href="/terms" class="text-secondary text-decoration-none">Terms</a></li>
                 </ul>
             </div>
 
             <!-- Subscribe -->
-            <div style="font-family:Sevillana cursive" class="col-md-3">
-                <h5>Subscribe</h5>
-                <p>Get the latest updates and offers straight to your inbox.</p>
-                <form>
+            <div class="col-md-3">
+                <h5 class="mb-4">Newsletter</h5>
+                <p class="text-secondary" style="font-size: 0.9rem;">Get the latest updates and exclusive offers.</p>
+                <form class="mt-3">
                     <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Your email address" required>
-                        <button class="btn btn-outline-dark" type="submit">Subscribe</button>
+                        <input type="email" class="form-control bg-transparent text-light border-secondary shadow-none"
+                            placeholder="Email address" required style="border-radius:0;">
+                        <button class="btn btn-outline-light" type="submit" style="border-radius:0;">Subscribe</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <!-- Social Media Icons -->
-        <div class="row mt-4">
-            <div class="col text-center">
-                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-dark mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-dark mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-dark mx-2"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
+        <hr class="mt-5 mb-4 border-secondary">
 
         <!-- Copyright -->
-        <div style="font-family:Sevillana cursive" class="row mt-4">
+        <div class="row">
             <div class="col text-center">
-                <p>&copy; 2024 Luxe. All rights reserved.</p>
+                <p class="text-secondary mb-0" style="font-size: 0.85rem;">&copy; 2024 Luxe Couture. All rights
+                    reserved.</p>
             </div>
         </div>
     </div>

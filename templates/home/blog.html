@@ -1,59 +1,47 @@
-
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-
-
-
-<div class="container">
-    <div style="font-family:Sevillana cursive" class="container   ">
-        <h3> <b>BLOG POSTS</b></h3>
-        <br>
-        
-    </div>
-</div>
-
-<div style="font-family:Sevillana cursive"class="container-fluid">
-    <div class="container-fluid d-flex  justify-content-evenly">
-        <div class="part2 d-flex  justify-content-evenly">
-          <a href="#">
-            <div class="cards2"> 
-              <img src="https://luxecouturefashion.com/cdn/shop/articles/Untitled_design_540x.png?v=1643326277" width="460px"  height="257px">
-              <br>
-              <br>
-              <center>
-                <p> VALENTINES DAY ❤️</p>
-              </center>
-              
-              
-            </div>
-          </a>
-          <a href="#">
-            <div class="cards2">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkNxQGIynkL5eTId6ZWf4slfqmNUHAg5S6CGthOHK_yCt_8xXFPUuCSCds147r-r5jgcg&usqp=CAU" width="460px"  height="257px">
-              <br>
-              <br>
-              <center>
-                <p>EXTREME SALES</p>
-              </center>
-              
-            </div>
-          </a>
-          
-         <a href="#">
-          <div class="cards2">
-            <img src="https://media.licdn.com/dms/image/D4D12AQFCRI3o7wjtcA/article-cover_image-shrink_720_1280/0/1719573388218?e=2147483647&v=beta&t=Jgx51Chljtw0BVDw5gy_b5oMakOHlEc4ZCcM94cSfUc" width="460px"  height="257px"> 
-            <br>
-            <br>
-            <center>
-              <p>FAST FASHION MAGZINES</p>
-            </center>           
-          </div>
-         </a>
-          
-          
-          
-      
+<div class="row g-4">
+  <div class="col-md-4">
+    <a href="#" class="text-decoration-none">
+      <div class="custom-card">
+        <div class="custom-card-img-wrapper" style="height:300px;">
+          <img src="https://luxecouturefashion.com/cdn/shop/articles/Untitled_design_540x.png?v=1643326277"
+            alt="Blog 1">
         </div>
-        
-      </div> 
+        <div class="p-4 text-center">
+          <p class="text-uppercase text-muted small mb-2" style="letter-spacing: 2px;">Editorial</p>
+          <h5 class="text-dark mb-0">Valentines Day</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href="#" class="text-decoration-none">
+      <div class="custom-card">
+        <div class="custom-card-img-wrapper" style="height:300px;">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkNxQGIynkL5eTId6ZWf4slfqmNUHAg5S6CGthOHK_yCt_8xXFPUuCSCds147r-r5jgcg&usqp=CAU"
+            alt="Blog 2">
+        </div>
+        <div class="p-4 text-center">
+          <p class="text-uppercase text-muted small mb-2" style="letter-spacing: 2px;">Offers</p>
+          <h5 class="text-dark mb-0">Extreme Sales</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href="#" class="text-decoration-none">
+      <div class="custom-card">
+        <div class="custom-card-img-wrapper" style="height:300px;">
+          <img
+            src="https://media.licdn.com/dms/image/D4D12AQFCRI3o7wjtcA/article-cover_image-shrink_720_1280/0/1719573388218?e=2147483647&v=beta&t=Jgx51Chljtw0BVDw5gy_b5oMakOHlEc4ZCcM94cSfUc"
+            alt="Blog 3">
+        </div>
+        <div class="p-4 text-center">
+          <p class="text-uppercase text-muted small mb-2" style="letter-spacing: 2px;">Trends</p>
+          <h5 class="text-dark mb-0">Fast Fashion Magazines</h5>
+        </div>
+      </div>
+    </a>
+  </div>
 </div>

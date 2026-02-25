@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path,include
 from ecom import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', views.admin_panel),
     path('', views.home),
@@ -35,10 +38,9 @@ urlpatterns = [
     path('make-payment/', views.make_payment, name='make_payment'),
     path('products/order/<str:payment_id>/<int:amount>/', views.order_detail, name='order_detail'),
     path('admin/product/', include('product.product_urls')),
-
-
     path('product/<int:id>/', views.product_details, name='product_details'),
-
 ]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

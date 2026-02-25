@@ -1,49 +1,57 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/nav.css' %}">
-<link rel="stylesheet" href="{% static 'css/cart.css' %}">
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
-  <div class="container d-flex justify-content-between align-items-center">
+<nav class="navbar navbar-expand-lg px-4">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
 
     <!-- Brand Logo -->
-    <a class="navbar-brand" href="/">
-      <img src="https://luxecouturefashion.com/cdn/shop/files/Website_Carousel-21_21d1b381-b779-406c-a7af-592a060a4cb5_400x.png?v=1632943352"
-           alt="Logo" width="180" height="auto">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <h3 class="m-0" style="font-family: 'Playfair Display', serif; font-size: 1.8rem; letter-spacing: 2px;">LUXE.</h3>
     </a>
 
     <!-- Toggle Button for Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" style="padding: 0;">
+      <i class="bi bi-list fs-1 text-dark"></i>
     </button>
 
-    <!-- Right Side Items -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-      {% if user.is_authenticated %}
-      <!-- Cart Button -->
-      <a class="btn btn-danger btn-lg position-relative me-3" href="/cart">
-        <i class="bi bi-cart2 fs-4"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-          {{ cartvalue }}
-        </span>
-      </a>
-      {% endif %}
+    <!-- Center/Right Side Items -->
+    <div class="collapse navbar-collapse justify-content-end gap-3" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 align-items-center gap-3">
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" style="font-size: 0.85rem; font-weight: 500; letter-spacing: 1px;"
+            href="/">Home</a>
+        </li>
+      </ul>
 
-      <!-- Profile Dropdown -->
-      <div class="nav-item dropdown profile-icon">
-        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
-          <img src="https://cdn.iconscout.com/icon/free/png-256/free-account-269-866236.png"
-               alt="User" width="35" height="35" class="rounded-circle">
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        {% if user.is_authenticated %}
+        <!-- Cart Button -->
+        <a class="position-relative nav-link" href="/cart" style="text-decoration:none;">
+          <i class="bi bi-bag fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+            style="font-size: 0.65rem;">
+            {{ cartvalue|default:"0" }}
+          </span>
         </a>
-        <ul class="dropdown-menu dropdown-menu-end text-center">
-          {% if user.is_authenticated %}
-          <li><a class="nav-link" href="/logout">Logout</a></li>
-          {% else %}
-          <li><a class="nav-link" href="/login/">Login</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="nav-link" href="/register">Register</a></li>
-          {% endif %}
-        </ul>
+        {% endif %}
+
+        <!-- Profile Dropdown -->
+        <div class="nav-item dropdown profile-icon">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" role="button" data-bs-toggle="dropdown"
+            style="cursor:pointer;">
+            <i class="bi bi-person fs-4"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm" style="border-radius:0;">
+            {% if user.is_authenticated %}
+            <li><a class="dropdown-item py-2" href="/logout">Logout</a></li>
+            {% else %}
+            <li><a class="dropdown-item py-2" href="/login/">Login</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item py-2" href="/register">Register</a></li>
+            {% endif %}
+          </ul>
+        </div>
       </div>
     </div>
 
